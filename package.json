@@ -27,9 +27,9 @@
     "start": "node setup.js",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "copy.metamask.prod": "cp -R extensions app/dist && cp extensions.js app/dist && cp main.js app/dist",
+    "copy.metamask.prod": "cp -R extensions your-app/dist && cp extensions.js your-app/dist && cp main.js your-app/dist",
     "download.metamask.dev": "mkdir -p extensions && rm -rf extensions/* && cd extensions && ced nkbihfbeogaeaoehlefnkodbefgpgknn && mv nkbihfbeogaeaoehlefnkodbefgpgknn metamask",
-    "download.metamask.prod": "mkdir -p app/dist/extensions && rm -rf app/dist/extensions/* && cd app/dist/extensions && ced nkbihfbeogaeaoehlefnkodbefgpgknn && mv nkbihfbeogaeaoehlefnkodbefgpgknn metamask",
+    "download.metamask.prod": "mkdir -p your-app/dist/extensions && rm -rf your-app/dist/extensions/* && cd your-app/dist/extensions && ced nkbihfbeogaeaoehlefnkodbefgpgknn && mv nkbihfbeogaeaoehlefnkodbefgpgknn metamask",
     "build": "npm run download.metamask.prod && npm run copy.metamask.prod && yarn dist",
     "build.linux": "npm run download.metamask.prod && npm run copy.metamask.prod && yarn dist -l",
     "build.win": "npm run download.metamask.prod && npm run copy.metamask.prod && yarn dist -w",
@@ -46,7 +46,8 @@
     "productName": "Electron Metamask Boilerplate",
     "muonVersion": "4.7.1",
     "files": [
-      "./**/*"
+      "dist/**/*",
+      "node_modules/**/*"
     ],
     "asar": true,
     "asarUnpack": [
@@ -55,7 +56,7 @@
     "directories": {
       "buildResources": "app/dist/assets/icons",
       "output": "dist",
-      "app": "app"
+      "app": "your-app"
     },
     "nodeGypRebuild": false,
     "linux": {
@@ -63,17 +64,17 @@
         "deb",
         "AppImage"
       ],
-      "icon": "app/dist/assets/icons",
+      "icon": "your-app/dist/assets/icons",
       "category": "Office"
     },
     "mac": {
       "category": "public.app-category.finance",
-      "target": "default",
-      "icon": "app/dist/assets/icons/swapy-exchange"
+      "target": "tar.gz",
+      "icon": "your-app/dist/assets/icons/swapy-exchange"
     },
     "win": {
       "target": "nsis",
-      "icon": "app/dist/assets/icons/swapy-exchange.ico"
+      "icon": "your-app/dist/assets/icons/swapy-exchange.ico"
     }
   },
   "devDependencies": {

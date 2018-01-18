@@ -27,7 +27,7 @@ function createWindow() {
   extensions.loadMetamask(session, win, isDev);
 
   let indexPath;
-  isDev ? indexPath = path.join(`brave/${__dirname}`, 'app/index.html') : indexPath = path.join(`brave/${__dirname}`, 'app/index.html');
+  isDev ? indexPath = path.join(`brave/${__dirname}`, 'your-app/index.html') : indexPath = path.join(`brave/${__dirname}`, 'index.html');
 
   setTimeout(() => {
     win.loadURL(url.format({
@@ -48,8 +48,8 @@ function createWindow() {
     win.maximize();
   }, 200);
 
+  win.webContents.openDevTools();
   if(isDev) {
-    win.webContents.openDevTools();
   }
 
   ipcMain.on('open-link', (evt, link) => {

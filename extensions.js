@@ -22,7 +22,7 @@ const loadMetamaskFromManifest = (session, metamaskPath) => {
   });
 };
 
-const openPopup = (file) => {
+const createPopup = (file) => {
   return new BrowserWindow({
     title: 'MetaMask',
     width: 360,
@@ -30,7 +30,6 @@ const openPopup = (file) => {
     type: 'popup',
     resizable: false
   });
-  metamaskPopup.loadURL(`chrome-extension://${METAMASK_ID}/${file}`);
 };
 
 const closePopup = (popup) => {
@@ -49,13 +48,15 @@ const loadMetamask = (session, window, isDev) => {
   ipcMain.on('open-metamask-popup', (event, arg) => {
     if(metamaskPopup && !metamaskPopup.isDestroyed()) metamaskPopup.close();
 
-    metamaskPopup = openPopup('file.html');
+    metamaskPopup = createPopup();
+    metamaskPopup.loadURL(`chrome-extension://${METAMASK_ID}/popup.html`);
   });
 
   ipcMain.on('open-metamask-notification', (event, arg) => {
     if(metamaskNotification && !metamaskNotification.isDestroyed()) metamaskNotification.close();
 
-    metamaskPopup = openPopup('notification.html');
+    metamaskNotification = createPopup();
+    metamaskNotification.loadURL(`chrome-extension://${METAMASK_ID}/notification.html`);
   });
 
   ipcMain.on('close-metamask-popup', (event, arg) => {
