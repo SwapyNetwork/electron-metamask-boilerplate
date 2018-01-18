@@ -1,0 +1,29 @@
+{
+  "name": "electron-metamask-boilerplate",
+  "version": "0.0.1",
+  "description": "Easily create a desktop version of your dApp using Electron (Muon) + MetaMask.",
+  "main": "setup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwapyNetwork/electron-metamask-boilerplate.git"
+  },
+  "keywords": [
+    "muon",
+    "electron",
+    "metamask",
+    "dapp",
+    "ethereum",
+    "decentralized",
+    "desktop",
+    "app"
+  ],
+  "author": "Swapy Network",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/SwapyNetwork/electron-metamask-boilerplate/issues"
+  },
+  "homepage": "https://github.com/SwapyNetwork/electron-metamask-boilerplate#readme"
+}
