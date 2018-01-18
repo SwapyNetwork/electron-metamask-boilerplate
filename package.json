@@ -42,12 +42,11 @@
     "url": "git+https://github.com/SwapyNetwork/electron-metamask-boilerplate.git"
   },
   "build": {
-    "appId": "swapy-exchange-alpha",
-    "productName": "Swapy Exchange Alpha",
+    "appId": "electron-metamask-boilerplate",
+    "productName": "Electron Metamask Boilerplate",
     "muonVersion": "4.7.1",
     "files": [
-      "dist/**/*",
-      "!node_modules"
+      "./**/*"
     ],
     "asar": true,
     "asarUnpack": [
