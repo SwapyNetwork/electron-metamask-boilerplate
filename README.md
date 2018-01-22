@@ -44,33 +44,31 @@ It's recommended to add the submodule with `https` instead of `ssh`. This way yo
 ------
 
 Now the folder structure should be something like:
+```
+electron-metamask-boilerplate
+  -> node_modules/
 
-> **electron-metamask-boilerplate**
->
-> ​	-> node_modules/
->
-> ​	-> extensions/
->
-> ​		--> metamask/
->
-> ​	-> main.js
->
-> ​	-> package.json
->
-> ​	->  [ ... ]
->
-> ​	-> **app** - (your git repository)
->
-> ​		--> node_modules/
->
-> ​		--> src/
->
-> ​		--> dist/
->
-> ​		--> package.json
->
-> ​		--> [ ... ]
+  -> extensions/
 
+    --> metamask/
+
+  -> main.js
+
+  -> package.json
+  
+  ->  [ ... ]
+
+  -> app - (your git repository)
+    --> node_modules/
+
+    --> src/
+
+    --> dist/
+
+    --> package.json
+
+    --> [ ... ]
+```
 
 
 ### Setting up your project
