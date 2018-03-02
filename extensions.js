@@ -13,7 +13,7 @@ const getMetamaskPath = (isDev) => {
 };
 
 const loadMetamaskFromManifest = (session, metamaskPath) => {
-  fs.readFile(`${metamaskPath}/manifest.json`, 'utf8', function (err, data) {
+  fs.readFile(path.join(metamaskPath,'manifest.json'), 'utf8', function (err, data) {
     if (err) throw err;
     manifest = JSON.parse(data);
     manifest.content_scripts[0].matches = ['chrome://brave/**/*'];
