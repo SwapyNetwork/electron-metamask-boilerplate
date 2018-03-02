@@ -77,7 +77,9 @@ Usually the frontend code that is rendered in the browser resides within a `dist
 
 Now, edit `main.js` to properly read `index.html` from your app's folder.
 
-In development mode Muon will read the extensions file from the parent folder at `/extensions/metamask`, but when bundling to production, Electron Builder will expect the same folder at `app/dist/extensions/metamask`. This can be changed in `extensions.js`.
+In development mode Muon will read the extensions file from the parent folder at `/extensions/metamask`, but when bundling to production, Electron Builder will expect the same folder at `app/dist/extensions/metamask` (this can be changed in `extensions.js`).
+
+We've set up npm scripts to download MetaMask from Chrome Store. When in development run `npm run download.metamask.dev`. In production `npm run download.metamask.prod`.
 
 Once you're ready run `npm start` for a development server.
 
