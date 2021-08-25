@@ -1,4 +1,7 @@
-# Electron (Muon) + Metamask Boilerplate
+# [DISCONTINUED] Electron (Muon) + Metamask Boilerplate
+
+**⚠️ This project is no longer maintained. Please beware of this before starting using it!**
+
 Easily create a desktop version of your dApp using Electron (Muon) + MetaMask.
 
 ### ![](https://cdn-images-1.medium.com/max/800/1*MYbvRTB7etsgyJGVarSFWQ.png)
